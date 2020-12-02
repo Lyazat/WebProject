@@ -1,0 +1,33 @@
+﻿@page
+@model Yummyset.Pages.login.IndexModel
+@{
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignIn</title>
+</head>
+<body>
+
+    <h3 class="text-white ml-1">Login Form</h3>
+    <h2 class="text-white">@Model.Msg</h2>
+    <form method="post" asp-page="Index">
+        <table>
+            <tr>
+                <td class="text-white">Username</td>
+                <td><input type="text" asp-for="@Model.Username" /></td>
+            </tr>
+            <tr>
+                <td class="text-white">Password</td>
+                <td><input type="password" asp-for="@Model.Password" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Login" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

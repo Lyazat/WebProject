@@ -1,0 +1,193 @@
+﻿@page
+@model Yummyset.Pages.ContactsModel
+@{
+}
+<style>
+#header {
+background:rgb(51, 51, 51);
+}
+
+
+#header h1 {
+position:absolute;
+font-family:Snell oundhand, cursive;
+font-size:50px;;
+margin-top:10px;
+margin-left:100px;
+color:rgb(250,128,114);
+text-shadow: 1px 1px 2px #082b34;
+}
+
+a {
+color:#000;
+}
+
+a:hover {
+filter:brightness(150%);
+}
+
+img {
+position:absolute;
+}
+
+#info {
+padding:50px;
+margin-top:30px;
+}
+
+#info h1 {
+color:	rgb(250,128,114);
+text-transform:uppercase;
+font-size:35px;
+text-align:center;
+font-family:comic sans ms;
+text-shadow:0.5px 0.5px 0.5px black;
+margin:0;
+}
+
+.button { /*class "button" is to decorate button */
+	padding: 1em 2em;
+	border-radius:7px / 100%;
+	width:200px;
+	height:80px;
+	font-family:times new roman;
+	text-transform:uppercase;
+	text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
+	font-size:25px;
+	color:#fff;
+	position:relative;
+	box-shadow:1px 1px black;
+	background-color:rgb(19, 23, 20);
+	box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: .3s;
+}
+
+.button:hover { /*activates after you mouse over the button*/
+  background: #FFF1DE;
+  box-shadow: 0 15px 20px rgba(46,229,157,.4);
+  color: rgb(19, 23, 20);
+  transform: translateY(-7px);
+}
+
+h3 {
+	text-align:center;
+}
+.box { /*class "box" is to decorate all of the elements inside it*/
+	left:35%;
+	padding:30px;
+	width:900px;
+	border:1px solid white;
+	background-color:#FFF;
+	box-sizing:border-box;
+	box-shadow:1px #FFA07A;
+	text-transform:uppercase;
+	margin-left:120px;
+	margin-top:-50px;
+
+}
+
+.box input { /*I used this to decorate "input" elements inside the class "box"*/
+	padding:10px;
+	margin-left:-15px;
+}
+
+div.a input { /*I used this to set the width to the "input" element inside the class "a" */
+	width:830px;
+}
+
+
+.a { /*for all of the elements of class "a"*/
+	position:relative;
+}
+
+.form-control { /*to decorate all of the "input" elements with class "form-control"*/
+	height:40px;
+}
+
+.form-control:focus { /*"focus" defines the style for the element that receives focus*/
+	box-shadow:none;
+}
+label { /*for all of the "label" elements*/
+	position:absolute;
+	transition:all 0.3s;
+	font-weight:normal;
+	top:100px;
+}
+.form-control:focus ~ label {
+	left:5px;
+	top:-10px;
+	background:#ffff;
+	padding:0 5px;
+}
+
+textarea {
+width:832px;
+height:100px;
+padding:10px;
+font-family:times new roman;
+margin-left:-15px;
+font-size:16px;
+}
+
+div pre {
+margin: 0;
+background: #FFF1DE;
+color: #58554B;
+padding: 30px;
+font-family: 'Lato', sans-serif;
+font-style:italic;
+font-size:18px;
+text-align:center;
+}
+
+div .p {
+margin-top:40px;
+width:900px;
+margin-left:70px;
+}
+
+
+</style>
+<div id="page">
+    <div id="info">
+        <h1>contact us</h1>
+        <div class="p">
+<pre>Hi! Thanks for visiting our website. We want to provide the best experience possible! 
+To help us, please take a moment to leave your feedback. </pre>
+        </div>
+    </div><!--info-->
+
+    <div class="box">
+        <!--I used div to group the elements-->
+        <form>
+            <div class="a">
+                <!--I set the class "a" to all fields to apply function for them in JavaScript-->
+                <input type="text" class="form-control" placeholder="First Name" /><br><br>
+                <label for="name">First Name</label>
+            </div>
+
+            <div class="a">
+                <input type="text" class="form-control" placeholder="Last Name" /><br><br>
+                <label for="company">Last Name</label>
+            </div>
+
+            <div class="a">
+                <input type="email" class="form-control" placeholder="Email" name="email" /><br><br>
+                <label for="email">Email</label>
+            </div>
+
+            <div class="a">
+                <input type="text" class="form-control" placeholder="Phone Number" /><br><br>
+                <label for="phone">Phone Number</label>
+            </div>
+
+            <div class="a">
+<textarea placeholder="Your Message"></textarea><br><br>
+                <label for="help"></label>
+            </div>
+
+
+
+        </form>
+        <h3><button onclick="sendFeedback()" class="button">Send</button></h3>
+    </div><!--box-->
